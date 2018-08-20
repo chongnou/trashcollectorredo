@@ -1,0 +1,66 @@
+﻿@model TrashCollectorRedo.Models.Employee
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>Employee</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.Name)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Name)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Zip)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Zip)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.FilterCustomer)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.FilterCustomer)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.ConfirmPickup)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.ConfirmPickup)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.ConfirmCharge)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.ConfirmCharge)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.UserId)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.UserId)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.Id }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

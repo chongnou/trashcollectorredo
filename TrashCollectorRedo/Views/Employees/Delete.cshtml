@@ -1,0 +1,72 @@
+﻿@model TrashCollectorRedo.Models.Employee
+
+@{
+    ViewBag.Title = "Delete";
+}
+
+<h2>Delete</h2>
+
+<h3>Are you sure you want to delete this?</h3>
+<div>
+    <h4>Employee</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.Name)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Name)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Zip)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Zip)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.FilterCustomer)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.FilterCustomer)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.ConfirmPickup)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.ConfirmPickup)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.ConfirmCharge)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.ConfirmCharge)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.UserId)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.UserId)
+        </dd>
+
+    </dl>
+
+    @using (Html.BeginForm()) {
+        @Html.AntiForgeryToken()
+
+        <div class="form-actions no-color">
+            <input type="submit" value="Delete" class="btn btn-default" /> |
+            @Html.ActionLink("Back to List", "Index")
+        </div>
+    }
+</div>
