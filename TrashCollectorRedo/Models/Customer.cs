@@ -6,7 +6,7 @@ using System.Web;
 
 namespace TrashCollectorRedo.Models
 {
-    public class Employee
+    public class Customer
     {
         [Key]
         public int Id { get; set; }
@@ -15,11 +15,11 @@ namespace TrashCollectorRedo.Models
 
         public int Zip { get; set; }
 
-        public string FilterCustomer { get; set; }
+        public string PickUp { get; set; }
 
-        public string ConfirmPickup { get; set; }
+        public string OneTimePickup { get; set; }
 
-        public string ConfirmCharge { get; set; }
+        public string AmountDueThisMonth { get; set; }
 
         public string UserId { get; set; }
     }

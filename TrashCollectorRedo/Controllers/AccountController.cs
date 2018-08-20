@@ -139,7 +139,15 @@ namespace TrashCollectorRedo.Controllers
         [AllowAnonymous]
         public ActionResult Register()
         {
-            return View();
+            ApplicationDbContext db = new ApplicationDbContext();
+
+            var roles = db.Roles.ToList();
+            RegisterViewModel rvm = new RegisterViewModel()
+            {
+                AspNetRoles = roles
+            };
+            return View(rvm);
+
         }
 
         //
